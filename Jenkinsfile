@@ -6,7 +6,7 @@ pipeline {
         stage('Requirements') {
             steps {
                 echo 'Fetching source code...'
-            
+            }
         }
 
         stage('Plan') {
