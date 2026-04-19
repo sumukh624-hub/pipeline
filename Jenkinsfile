@@ -1,25 +1,41 @@
-pipeline {
+pipeline { 
     agent any 
+
     stages {
-        stage('Plain') {
+
+        stage('Requirements') {
             steps {
-                echo 'Planning...' 
-                
+                echo 'Fetching source code...'
             }
         }
+
+        stage('Plan') {
+            steps {
+                echo 'Planning...'
+            }
+        }
+
         stage('Build') {
             steps {
-                echo 'Building...' 
+                echo 'Building...'
             }
         }
+
+        stage('Package') {
+            steps {
+                echo 'Packaging application...'
+            }
+        }
+
         stage('Test') {
             steps {
-                echo 'Testing...' 
+                echo 'Testing...'
             }
         }
+
         stage('Deploy') {
             steps {
-                echo 'Deploying...' 
+                echo 'Deploying...'
             }
         }
     }
